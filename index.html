@@ -7,22 +7,56 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>🔥</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     </head>
     <style>
-        h1 {
-            color: red;
-        }
+    #jb__body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+    .jb__navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+    .jb__navbar-list {
+        width: 50%;
+        display: flex;
+        List-style-type: none;
+        justify-content: space-around;
+    }
+    .jb__navbar-list-item {
+        cursor: pointer;
+    }
+    .jb__navbar-icon {
+        cursor: pointer;
+    }
     </style>
-    <body>
-        <h1>
-            ELLO WORLD
-        </h1>
-        <script src="" async defer>
-            console.log('clicked')
+    <body id="jb__body">
+        <div class="jb__navbar">
+            <div>
+                <div>JB</div>
+                <img class="jb__navbar-icon" data-target="face" src="icons/face.svg" />
+                <img class="jb__navbar-icon" data-target="heart" src="icons/heart.svg" />
+            </div>
+            
+            <ul class="jb__navbar-list">
+                <li class="jb__navbar-list-item"><a>home</a></li>
+                <li class="jb__navbar-list-item"><a>contact</a></li>
+                <li class="jb__navbar-list-item"><a>gallery</a></li>
+                <li class="jb__navbar-list-item"><a>contact</a></li>
+                <li class="jb__navbar-list-item"><a>help</a></li>
+            </ul>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(".jb__navbar-icon").click(function() {
+                var target = $(this).data("target");
+                console.log(target)
+            });
         </script>
     </body>
 </html>
