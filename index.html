@@ -55,7 +55,10 @@
         <script>
             $(".jb__navbar-icon").click(function() {
                 var target = $(this).data("target");
-                console.log(target)
+                console.log(target);
+                $('body').removeClass();
+                $('body').addClass(target);
+
             });
         </script>
     </body>
